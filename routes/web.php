@@ -56,3 +56,7 @@ Route::get('/shows', function () {
 // Route::post('settings/profile', 'SettingsController@updateProfile');
 // Route::get('settings/password', 'SettingsController@editPassword');
 // Route::post('settings/password', 'SettingsController@updatePassword');
+
+Route::group(['middleware'=>'cors'], function () {
+    Route::get('/contoh','TestingController@api');
+});
